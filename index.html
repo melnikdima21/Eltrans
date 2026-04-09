@@ -6,7 +6,53 @@
 <meta name="theme-color" content="#080808">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>ElTrans — Premium Transfer</title>
+<title>ElTrans — Premium Transfer | Кишинёв · Одесса · Киев · Бухарест</title>
+<meta name="description" content="Премиум трансфер из Кишинёва в Одессу, Киев, Бухарест, Яссы и по всей Европе. Mercedes S-Class, Chrysler Pacifica, Hyundai Grandeur. Комфорт, точность, адрес в адрес.">
+<meta name="keywords" content="трансфер Кишинёв Одесса, такси Кишинёв Киев, трансфер Молдова Украина, премиум такси Кишинёв, ElTrans, трансфер Кишинёв Бухарест, такси Молдова Румыния, transfer Chisinau Odessa, transfer Chisinau Kiev, taxi Chisinau, premium transfer Moldova">
+<meta name="robots" content="index, follow">
+<meta name="author" content="ElTrans Premium Transfer">
+<meta name="language" content="ru">
+<link rel="canonical" href="https://eltrans.md">
+
+<!-- Open Graph (для соцсетей и мессенджеров) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eltrans.md">
+<meta property="og:title" content="ElTrans — Premium Transfer | Кишинёв · Одесса · Киев · Европа">
+<meta property="og:description" content="Премиум трансфер из Кишинёва в Одессу, Киев, Бухарест и по всей Европе. Mercedes S-Class, Chrysler Pacifica Pinnacle. Адрес в адрес, максимальный комфорт.">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ElTrans">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ElTrans — Premium Transfer">
+<meta name="twitter:description" content="Премиум трансфер из Кишинёва в Одессу, Киев, Бухарест и по всей Европе.">
+
+<!-- Geo теги -->
+<meta name="geo.region" content="MD">
+<meta name="geo.placename" content="Chisinau">
+
+<!-- Schema.org разметка для Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ElTrans Premium Transfer",
+  "description": "Премиум трансфер из Кишинёва в Одессу, Киев, Бухарест, Яссы и по всей Европе. Mercedes S-Class, Chrysler Pacifica Pinnacle, Hyundai Grandeur.",
+  "url": "https://eltrans.md",
+  "telephone": "+37367707895",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Кишинёв",
+    "addressCountry": "MD"
+  },
+  "areaServed": ["Moldova", "Ukraine", "Romania", "Europe"],
+  "priceRange": "€€€",
+  "serviceType": "Premium Transfer",
+  "availableLanguage": ["Russian", "Romanian", "English"],
+  "sameAs": ["https://t.me/eltransmd"]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -32,6 +78,11 @@ body {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-x: none;
 }
 
 /* NAV */
@@ -61,12 +112,13 @@ nav {
   font-size: 10px; letter-spacing: 3px;
   text-transform: uppercase; cursor: pointer;
   transition: all 0.3s ease; text-decoration: none;
+  touch-action: manipulation;
 }
 .nav-cta:hover { background: var(--gold); color: var(--black); }
 
 /* HERO */
 .hero {
-  min-height: 100vh;
+  min-height: 100vh; min-height: 100svh;
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
   text-align: center; position: relative;
@@ -229,6 +281,9 @@ nav {
   width: 100%; height: 240px; object-fit: cover;
   display: block; transition: transform 0.6s ease;
   filter: brightness(0.9);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
 }
 .car-card:hover .car-photo { transform: scale(1.03); filter: brightness(1); }
 .car-photo-wrap { overflow: hidden; position: relative; }
@@ -268,6 +323,7 @@ nav {
   color: var(--gold); font-family: 'Montserrat', sans-serif;
   font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
   cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden;
+  touch-action: manipulation; -webkit-appearance: none;
 }
 .car-btn::before {
   content: ''; position: absolute; inset: 0;
@@ -375,6 +431,8 @@ footer {
   width: 92%; max-width: 660px; max-height: 90vh;
   overflow-y: auto; padding: 48px 40px; position: relative;
   transform: translateY(32px); transition: transform 0.4s ease;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 .modal-overlay.open .modal { transform: translateY(0); }
 .modal::-webkit-scrollbar { width: 3px; }
@@ -428,12 +486,20 @@ footer {
 .form-input, .form-select, .form-textarea {
   width: 100%; background: var(--black); border: 1px solid var(--black-border);
   color: var(--white); padding: 14px 16px;
-  font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 300;
-  outline: none; transition: border-color 0.3s ease; -webkit-appearance: none; border-radius: 0;
+  font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 300;
+  outline: none; transition: border-color 0.3s ease; -webkit-appearance: none;
+  border-radius: 0; -webkit-border-radius: 0;
+  /* iOS fix: prevent zoom on focus */
 }
 .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); }
 .form-textarea { resize: vertical; min-height: 90px; }
 .form-select option { background: var(--black-card); }
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238B6914' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 44px;
+}
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
 /* Option cards */
@@ -444,6 +510,9 @@ footer {
   cursor: pointer; transition: all 0.3s ease;
   display: flex; align-items: center; gap: 14px;
   background: var(--black); position: relative;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
 }
 .option-card:hover { border-color: rgba(201,168,76,0.3); }
 .option-card.selected { border-color: var(--gold); background: rgba(201,168,76,0.06); }
@@ -466,7 +535,7 @@ footer {
 .modal-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--black-border); }
 .btn-back { background: none; border: none; color: var(--white-muted); font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; cursor: pointer; transition: color 0.2s; }
 .btn-back:hover { color: var(--white); }
-.btn-next { background: var(--gold); border: none; color: var(--black); font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; padding: 15px 36px; cursor: pointer; transition: all 0.3s ease; }
+.btn-next { background: var(--gold); border: none; color: var(--black); font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; padding: 15px 36px; cursor: pointer; transition: all 0.3s ease; touch-action: manipulation; -webkit-appearance: none; }
 .btn-next:hover { background: var(--gold-light); }
 
 /* Success */
@@ -554,6 +623,8 @@ footer {
   transition: all 0.2s ease;
   border-radius: 0;
   white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-appearance: none;
 }
 .comfort-tag:hover { border-color: rgba(201,168,76,0.4); color: var(--white); }
 .comfort-tag.selected {
@@ -599,6 +670,9 @@ footer {
   padding: 9px 14px; cursor: pointer;
   transition: all 0.25s ease;
   white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 .popular-btn:hover, .popular-btn.active {
   border-color: var(--gold);
@@ -670,7 +744,7 @@ footer {
 
   /* HERO */
   .hero {
-    min-height: 100svh;
+    min-height: 100vh; min-height: 100svh;
     padding: 80px 24px 64px;
     justify-content: center;
   }
@@ -766,7 +840,7 @@ footer {
   .modal {
     width: 100%;
     max-width: 100%;
-    max-height: 92svh;
+    max-height: 92vh; max-height: 92dvh;
     border-radius: 20px 20px 0 0;
     border-left: none; border-right: none; border-bottom: none;
     padding: 28px 20px 32px;
@@ -853,6 +927,15 @@ footer {
   .option-grid-2 { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .modal { padding: 24px 16px 28px; }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 </style>
 </head>
@@ -1317,10 +1400,26 @@ function openBooking(car) {
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
+function resetForm() {
+  // Очищаем все текстовые поля
+  document.querySelectorAll('.modal .form-input, .modal .form-textarea').forEach(el => el.value = '');
+  // Сбрасываем все select
+  document.querySelectorAll('.modal .form-select').forEach(el => el.selectedIndex = 0);
+  // Убираем выбор со всех option-card и comfort-tag
+  document.querySelectorAll('.modal .option-card, .modal .comfort-tag').forEach(el => el.classList.remove('selected'));
+  // Убираем активные popular-btn
+  document.querySelectorAll('.popular-btn').forEach(el => el.classList.remove('active'));
+  // Сбрасываем шаг
+  currentStep = 1;
+  clearFieldErrors();
+}
+
 function closeBooking() {
   clearFieldErrors();
   document.getElementById('modalOverlay').classList.remove('open');
   document.body.style.overflow = '';
+  // Сбрасываем форму после закрытия
+  setTimeout(resetForm, 400);
 }
 
 function updateModal() {
@@ -1488,7 +1587,7 @@ async function submitBooking() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        chat_id: 2101269840,
+        chat_id: -5159965847,
         text: msg,
         parse_mode: 'Markdown'
       })
@@ -1575,8 +1674,12 @@ function hideDropdown(fieldId) {
   setTimeout(() => {
     const drop = document.getElementById(fieldId === 'routeFrom' ? 'dropFrom' : 'dropTo');
     if (drop) drop.classList.remove('open');
-  }, 200);
+  }, 250);
 }
+// Close dropdowns on scroll (iOS)
+document.addEventListener('scroll', () => {
+  document.querySelectorAll('.city-dropdown').forEach(d => d.classList.remove('open'));
+}, { passive: true });
 function pickCity(fieldId, name) {
   document.getElementById(fieldId).value = name;
   const drop = document.getElementById(fieldId === 'routeFrom' ? 'dropFrom' : 'dropTo');
